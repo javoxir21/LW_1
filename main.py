@@ -25,10 +25,13 @@ class UserManager:
         except Exception:
             pass
 
+    def add_user(self, score: int, name: str, group: str, manager):
+        new_user: User = User(score=score, name=name, group=group, manager=manager)
+
 manager: UserManager = UserManager()
 
 javohir: User = User(score=3, name="Жавохир", group="ПИЖ-б-о-21-1", manager=manager)
-egor: User = User(score=5, name="Егор", group="ПИЖ-б-о-21-1", manager=manager)
+manager.add_user(score=5, name="Егор", group="ПИЖ-б-о-21-1", manager=manager)
 
 for user in manager.user_list:
     print(user)
