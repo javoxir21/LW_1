@@ -1,0 +1,1 @@
+user_info: list = input("Введите ваши данные: ").split()
